@@ -61,20 +61,20 @@ fn(...args);<br/>
 
 -----------------------------------------------------------
 <br/>
-## //Operadores unários: Executam uma ação com um único operando<br/>
+##  //Operadores unários: Executam uma ação com um único operando. <br/>
 EX:<br/>
 // delete something; // Deletar algo<br/>
 // typeof something; // Determinar tipo<br/>
 <br/>
 //Obs: String e array pussuem a propriedade length<br/>
 <br/>
-## // Operadores binários: Executam ações com dois operandos<br/>
+##  //Operadores binários: Executam ações com dois operandos. <br/>
 // Operador in = something in somethingItems <br/>
 // Operador instanceof = Verifica se o objeto é uma instância <br/>
 <br/>
 ----------------------------------------------------------<br/>
 <br/>
-## //Estruturas condicionais: if, else, for, else if, switch case, forEach...<br/>
+##  //Estruturas condicionais: if, else, for, else if, switch case, forEach... <br/>
 <br/>
 const array = [0, 1, 2, 3, 4, 5];<br/>
 <br/>
@@ -88,7 +88,7 @@ array.forEach(item => {<br/>
 <br/>
 // Obs: Rodar pelo node copiando e colando no terminal do VS Code.<br/>
 <br/>
-## //Encadeando condições com else if:<br/>
+##  //Encadeando condições com else if: <br/>
 <br/>
 const array = [2, 3, 4, 5, 6, 8, 10, 15];<br/>
 <br/>
@@ -103,7 +103,7 @@ array.forEach(item => {<br/>
    }<br/>
 });<br/>
   <br/>
-## //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if<br/>
+##  //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if <br/>
 <br/>
 console.log('\nif');<br/>
 array.forEach(item => {<br/>
@@ -118,7 +118,7 @@ if (item % 5 === 0) {<br/>
    }<br/>
 });   <br/>
 <br/>
-## //Switch case<br/>
+##  //Switch case <br/>
 <br/>
 const fruit = 'mamão';<br/>
 <br/>
@@ -138,12 +138,13 @@ switch (fruit) {<br/>
 <br/>
 //Obs: Ao inserir uma fruta não cadastrada o sistema exibirá "O produto não exister no estoque".<br/>
 <br/>
+
 -------------------------------------------------------------
 <br/>
-## //Estruturas de repetição: for, while, do...ehile, for...in, continue e break.<br/>
+##  //Estruturas de repetição: for, while, do...ehile, for...in, continue e break. <br/>
 <br/>
-## /** for ([expressãoInicial]; [condição]; [incremento/decremento])<br/>
-##   declaração<br/>
+##  /** for ([expressãoInicial]; [condição]; [incremento/decremento]) <br/>
+##   declaração <br/>
 */<br/><br/>
 
 // Ex:<br/>
@@ -155,8 +156,8 @@ for (let index =0; index < array.length; index++) {<br/>
 }<br/><br/>
    
    
-## /** while (condição) - Só começa a ser executado se a condição for verdade<br/>
-##       declaração<br/>
+##  /** while (condição) - Só começa a ser executado se a condição for verdade. <br/>
+##       declaração <br/>
   */<br/><br/>
   
 // Ex: <br/>  
@@ -169,7 +170,7 @@ while (n < 3){<br/>
 console.log(x);  <br/>
 <br/>
 
-## /** do while - Executa primeiro, depois verifica a condição. <br/>
+##  /** do while - Executa primeiro, depois verifica a condição. <br/>
    do<br/>
        declaração<br/>
      while (condição);<br/>
@@ -184,7 +185,7 @@ do {<br/>
 console.log(i);<br/><br/><br/>
 
 
-## //for in e for of<br/>
+##  //for in e for of <br/>
 // Ex:<br/>
 let arr = [3, 5, 7];<br/>
 arr.foo = "hello";<br/><br/>
@@ -199,10 +200,10 @@ for (let i of arr){<br/>
 //Obs. Array em função é um objeto, então podemos por a propriedade dentro dele.<br/><br/><br/>
 
 
-## //Controle da repetição com continue e break:<br/><br/>
+##  //Controle da repetição com continue e break: <br/><br/>
 
 // Ex:<br/>
-console.log('Exemplo da utilização de break');<br/>
+console.log('Exemplo da utilização de break'); <br/>
 var index = 0;<br/>
 while(true) {<br/>
    index++;<br/><br/>
