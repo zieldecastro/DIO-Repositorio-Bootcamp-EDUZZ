@@ -3,7 +3,7 @@ Repositório para guardar materiais de estudo, códigos e informações importan
 #TeamFullstackJS
 #contratodecompromisso
 
-//Neste documento me proponho a digitar e testar os exercícios na IDE (VS Code), pois entendo que dessa forma aprendo melhor.
+//Neste documento me proponho a digitar e testar os exercícios na IDE (VS Code), pois entendo que dessa forma aprendo melhor.<br/>
 //Para facilitar a leitura estarei dando um subtítulo para cada assunto.
 
 # Javascript
@@ -13,220 +13,221 @@ Currying, Hoisting, Imutabilidade, Tipos e Variáveis.
 
 //Função de execução imediata:
 
-let test = 'exemple'; //Variável no escopo global
-(() => {
-console.log(`Valor dentro da função "${test}"`); //Condicional buleano alterando o valor da variável
-if (true) {
-   let test = 'exemple';
-   console.log(`Valor dentro do if "${test}"`);
-}
-console.log(`Valor após a execução do if "{$test}"`);
-})();
+let test = 'exemple'; //Variável no escopo global<br/>
+(() => {<br/>
+console.log(`Valor dentro da função "${test}"`); //Condicional buleano alterando o valor da variável<br/>
+if (true) {<br/>
+   let test = 'exemple';<br/>
+   console.log(`Valor dentro do if "${test}"`);<br/>
+}<br/>
+console.log(`Valor após a execução do if "{$test}"`);<br/>
+})();<br/>
+<br/><br/>
+## //Obs: <br/><br/>
+//O var não respeita escopo de bloco, para respeitar devemos usar o let ou o const.<br/>
+//O const não nos permite alterar um valor do tipo primitivo de uma variável.<br/>
+<br/><br/>
+## //Exemplo de array com const:<br/><br/>
 
-## //Obs: 
-//O var não respeita escopo de bloco, para respeitar devemos usar o let ou o const.
-//O const não nos permite alterar um valor do tipo primitivo de uma variável.
-
-## //Exemplo de array com const:
-
-const persons = ['Guilherme', 'Pedro', 'Jennifer'];
-
-//Podemos adicionar novos itens
-persons.push('João');
-//['Guilherme', 'Pedro', 'Jennifer', 'João']
-
-//Podemos remover algum item
-persons.shift();
-//['Pedro', 'Jennifer', 'João']
-
-//Podemos alterar diretamente na posição do array
-persons[1] = 'James';
-// ['Pedro', 'James', 'João']
-
-console.log('\nArray após as alterações: ', persons);
-
------------------------------------------------------------
-
-## //Spread = iterar cada ítem de um array ou objeto e passar como parâmetro.
-// Foi incluído do ES6
-// Exemplo:
-
-var partes = ['ombro', 'joelhos'];
-var musica = ['cabeça', ...partes,'e', 'pés'];
-
-function fn(x, y, z){}
-var args = [0, 1, 2];
-fn(...args);
+const persons = ['Guilherme', 'Pedro', 'Jennifer'];<br/>
+<br/>
+//Podemos adicionar novos itens<br/>
+persons.push('João');<br/>
+//['Guilherme', 'Pedro', 'Jennifer', 'João']<br/>
+<br/>
+//Podemos remover algum item<br/>
+persons.shift();<br/>
+//['Pedro', 'Jennifer', 'João']<br/>
+<br/>
+//Podemos alterar diretamente na posição do array<br/>
+persons[1] = 'James';<br/>
+// ['Pedro', 'James', 'João']<br/>
+<br/>
+console.log('\nArray após as alterações: ', persons);<br/><br/>
 
 -----------------------------------------------------------
 
-## //Operadores unários: Executam uma ação com um único operando
-EX:
-// delete something; // Deletar algo
-// typeof something; // Determinar tipo
+## //Spread = iterar cada ítem de um array ou objeto e passar como parâmetro.<br/>
+// Foi incluído do ES6<br/>
+// Exemplo:<br/>
+<br/>
+var partes = ['ombro', 'joelhos'];<br/>
+var musica = ['cabeça', ...partes,'e', 'pés'];<br/>
+<br/>
+function fn(x, y, z){}<br/>
+var args = [0, 1, 2];<br/>
+fn(...args);<br/>
+<br/>
 
-//Obs: String e array pussuem a propriedade length
-
-## // Operadores binários: Executam ações com dois operandos
-// Operador in = something in somethingItems 
-// Operador instanceof = Verifica se o objeto é uma instância 
-
-----------------------------------------------------------
-
-## //Estruturas condicionais: if, else, for, else if, switch case, forEach...
-
-const array = [0, 1, 2, 3, 4, 5];
-
-array.forEach(item => {
-   if (item % 2 === 0) {
-   console.log(`O número ${item}é par.`);
-   } else {
-     console.log(`O número ${item} é impar.`);
-   }
-});   
-
-// Obs: Rodar pelo node copiando e colando no terminal do VS Code.
-
-## //Encadeando condições com else if:
-
-const array = [2, 3, 4, 5, 6, 8, 10, 15];
-
-console.log('\nelse if');
-array.forEach(item => {
-   if (item % 2 === 0) {
-      console.log(`O número ${item} é divisível por 2.`);
-   } else if (item % 3 === 0){
-      console.log(`O número ${item} é divisível por 3.`);
-   } else if (item % 5 === 0) {
-      console.log(`O número ${item} é divisível por 5.`);
-   }
-});
-  
-## //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if
-
-console.log('\nif');
-array.forEach(item => {
-   if (item % 2 === 0) {
-   console.log(`O número ${item} é divisível por 2.`);
-}
-if (item % 3 === 0) {
-   console.log(`O número ${item} é divisível por 3.`);
-}
-if (item % 5 === 0) {
-   console.log(`O número ${item} é divisível por 5.`);   
-   }
-});   
-
-## //Switch case
-
-const fruit = 'mamão';
-
-switch (fruit) {
-   case 'banana':
-     console.log('R$ 3,00 / kg');
-	 break;
-   case 'mamão':
-   case 'pera':
-   //Aqui basta ir incrementando os cases de frutas que custam o mesmo preço
-     console.log('R$ 2,00 / kg');
-     break;
-   default:
-     console.log('Produto não existe no estoque.');
-     break; //Obs: Se retirarmos esse break o default sempre será executado.
-}	 
-
-//Obs: Ao inserir uma fruta não cadastrada o sistema exibirá "O produto não exister no estoque".
-
+-----------------------------------------------------------
+<br/>
+## //Operadores unários: Executam uma ação com um único operando<br/>
+EX:<br/>
+// delete something; // Deletar algo<br/>
+// typeof something; // Determinar tipo<br/>
+<br/>
+//Obs: String e array pussuem a propriedade length<br/>
+<br/>
+## // Operadores binários: Executam ações com dois operandos<br/>
+// Operador in = something in somethingItems <br/>
+// Operador instanceof = Verifica se o objeto é uma instância <br/>
+<br/>
+----------------------------------------------------------<br/>
+<br/>
+## //Estruturas condicionais: if, else, for, else if, switch case, forEach...<br/>
+<br/>
+const array = [0, 1, 2, 3, 4, 5];<br/>
+<br/>
+array.forEach(item => {<br/>
+   if (item % 2 === 0) {<br/>
+   console.log(`O número ${item}é par.`);<br/>
+   } else {<br/>
+     console.log(`O número ${item} é impar.`);<br/>
+   }<br/>
+});   <br/>
+<br/>
+// Obs: Rodar pelo node copiando e colando no terminal do VS Code.<br/>
+<br/>
+## //Encadeando condições com else if:<br/>
+<br/>
+const array = [2, 3, 4, 5, 6, 8, 10, 15];<br/>
+<br/>
+console.log('\nelse if');<br/>
+array.forEach(item => {<br/>
+   if (item % 2 === 0) {<br/>
+      console.log(`O número ${item} é divisível por 2.`);<br/>
+   } else if (item % 3 === 0){<br/>
+      console.log(`O número ${item} é divisível por 3.`);<br/>
+   } else if (item % 5 === 0) {<br/>
+      console.log(`O número ${item} é divisível por 5.`);<br/>
+   }<br/>
+});<br/>
+  <br/>
+## //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if<br/>
+<br/>
+console.log('\nif');<br/>
+array.forEach(item => {<br/>
+   if (item % 2 === 0) {<br/>
+   console.log(`O número ${item} é divisível por 2.`);<br/>
+}<br/>
+if (item % 3 === 0) {<br/>
+   console.log(`O número ${item} é divisível por 3.`);<br/>
+}<br/>
+if (item % 5 === 0) {<br/>
+   console.log(`O número ${item} é divisível por 5.`); <br/>
+   }<br/>
+});   <br/>
+<br/>
+## //Switch case<br/>
+<br/>
+const fruit = 'mamão';<br/>
+<br/>
+switch (fruit) {<br/>
+   case 'banana':<br/>
+     console.log('R$ 3,00 / kg');<br/>
+	 break;<br/>
+   case 'mamão':<br/>
+   case 'pera':<br/>
+   //Aqui basta ir incrementando os cases de frutas que custam o mesmo preço<br/>
+     console.log('R$ 2,00 / kg'); <br/>
+     break;<br/>
+   default:<br/>
+     console.log('Produto não existe no estoque.');<br/>
+     break; //Obs: Se retirarmos esse break o default sempre será executado.<br/>
+}	 <br/>
+<br/>
+//Obs: Ao inserir uma fruta não cadastrada o sistema exibirá "O produto não exister no estoque".<br/>
+<br/>
 -------------------------------------------------------------
+<br/>
+## //Estruturas de repetição: for, while, do...ehile, for...in, continue e break.<br/>
+<br/>
+## /** for ([expressãoInicial]; [condição]; [incremento/decremento])<br/>
+##   declaração<br/>
+*/<br/><br/>
 
-## //Estruturas de repetição: for, while, do...ehile, for...in, continue e break.
-
-## /** for ([expressãoInicial]; [condição]; [incremento/decremento])
-##   declaração
-*/
-
-// Ex:
-const array = ['one', 'two', 'three'];
-
-for (let index =0; index < array.length; index++) {
-   const element = array[index];
-   console.log(`Element #${index}: ${element}.`);
-}
+// Ex:<br/>
+const array = ['one', 'two', 'three'];<br/>
+<br/>
+for (let index =0; index < array.length; index++) {<br/>
+   const element = array[index];<br/>
+   console.log(`Element #${index}: ${element}.`);<br/>
+}<br/><br/>
    
    
-## /** while (condição) - Só começa a ser executado se a condição for verdade
-##       declaração
-  */
+## /** while (condição) - Só começa a ser executado se a condição for verdade<br/>
+##       declaração<br/>
+  */<br/><br/>
   
-// Ex:   
-var n = 0;
-var x = 0;
-while (n < 3){
-  n++;
-  x += n; ...........// 1, 2, 6
-}
-console.log(x);  
+// Ex: <br/>  
+var n = 0;<br/>
+var x = 0;<br/>
+while (n < 3){<br/>
+  n++;<br/>
+  x += n; ...........// 1, 2, 6<br/>
+}<br/>
+console.log(x);  <br/>
+<br/>
+
+## /** do while - Executa primeiro, depois verifica a condição. <br/>
+   do<br/>
+       declaração<br/>
+     while (condição);<br/>
+  */<br/>
+  <br/>
+// Ex:<br/>
+let i = 0;<br/>
+do {<br/>
+  i += 1; <br/>
+  console.log(i);<br/>
+} while (i < 5);  <br/>
+console.log(i);<br/><br/><br/>
 
 
-## /** do while - Executa primeiro, depois verifica a condição. 
-   do
-       declaração
-     while (condição);
-  */
-  
-// Ex:
-let i = 0;
-do {
-  i += 1; 
-  console.log(i);
-} while (i < 5);  
-console.log(i);
+## //for in e for of<br/>
+// Ex:<br/>
+let arr = [3, 5, 7];<br/>
+arr.foo = "hello";<br/><br/>
 
+for (let i in arr){<br/>
+   console.log(i);  //logs "0", "1", "2", "foo" (O for in faz para cada propriedade do array).<br/>
+}<br/><br/>
 
-## //for in e for of
-// Ex:
-let arr = [3, 5, 7];
-arr.foo = "hello";
-
-for (let i in arr){
-   console.log(i);  //logs "0", "1", "2", "foo" (O for in faz para cada propriedade do array).
-}
-
-for (let i of arr){
-   console.log(i);  //logs "3", "5", "7"  (for of executa somente para as propriedades numeradas exibindo seus valores). 
+for (let i of arr){<br/>
+   console.log(i);  //logs "3", "5", "7"  (for of executa somente para as propriedades numeradas exibindo seus valores).<br/><br/> 
    
-//Obs. Array em função é um objeto, então podemos por a propriedade dentro dele.
+//Obs. Array em função é um objeto, então podemos por a propriedade dentro dele.<br/><br/><br/>
 
 
-## //Controle da repetição com continue e break:
+## //Controle da repetição com continue e break:<br/><br/>
 
-// Ex:
-console.log('Exemplo da utilização de break');
-var index = 0;
-while(true) {
-   index++;
+// Ex:<br/>
+console.log('Exemplo da utilização de break');<br/>
+var index = 0;<br/>
+while(true) {<br/>
+   index++;<br/><br/>
    
-   if (index > 2) {
-   break;
-   }
-   console.log(index);
- }
+   if (index > 2) {<br/>
+   break;<br/>
+   }<br/>
+   console.log(index);<br/>
+ }<br/><br/>
 
-//continue
-console.log('Exemplo da utilização de continue');
-const array = [1,2,3,4, 5, 6];
+//continue<br/>
+console.log('Exemplo da utilização de continue');<br/>
+const array = [1,2,3,4, 5, 6];<br/>
 
-for (let index = 0; index <  array.length; index++){
-   const element = array[index];
+for (let index = 0; index <  array.length; index++){<br/>
+   const element = array[index];<br/>
    
-   if (element % 2 === 0){
-      continue;
-   }	  
-   console.log(element);
-}
+   if (element % 2 === 0){<br/>
+      continue;<br/>
+   }	  <br/>
+   console.log(element);<br/>
+}<br/><br/>
 
 -----------------------------------------------------------
-
+<br/><br/><br/>
 
 
 # Iniciando no Typescript
