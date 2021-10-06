@@ -14,14 +14,14 @@ Currying, Hoisting, Imutabilidade, Tipos e Variáveis.
 //Função de execução imediata:
 
 let test = 'exemple'; //Variável no escopo global<br/>
-(() => {<br/>
+(( ) => {<br/>
 console.log(`Valor dentro da função "${test}"`); //Condicional buleano alterando o valor da variável<br/>
 if (true) {<br/>
    let test = 'exemple';<br/>
    console.log(`Valor dentro do if "${test}"`);<br/>
 }<br/>
 console.log(`Valor após a execução do if "{$test}"`);<br/>
-})();<br/>
+})( );<br/>
 <br/><br/>
 ## //Obs: <br/><br/>
 //O var não respeita escopo de bloco, para respeitar devemos usar o let ou o const.<br/>
