@@ -153,8 +153,7 @@ for (let index =0; index < array.length; index++) {<br/>
    
    
 #  /** while (condição) - Só começa a ser executado se a condição for verdade. <br/>
-       declaração <br/>
-  */<br/><br/>
+       declaração*/ <br/><br/>
   
 // Ex: <br/>  
 var n = 0;<br/>
