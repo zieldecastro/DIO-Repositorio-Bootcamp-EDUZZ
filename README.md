@@ -43,24 +43,22 @@ persons.shift();<br/>
 persons[1] = 'James';<br/>
 // ['Pedro', 'James', 'João']<br/>
 <br/>
-console.log('\nArray após as alterações: ', persons);<br/><br/>
+console.log('\nArray após as alterações: ', persons); <br/><br/>
 
------------------------------------------------------------
+-------------------------------
 
-# //Spread = iterar cada ítem de um array ou objeto e passar como parâmetro.<br/>
-// Foi incluído do ES6<br/>
-// Exemplo:<br/>
+# //Spread = iterar cada ítem de um array ou objeto e passar como parâmetro. <br/>
+// Foi incluído do ES6 <br/>
+// Exemplo: <br/>
 <br/>
-var partes = ['ombro', 'joelhos'];<br/>
-var musica = ['cabeça', ...partes,'e', 'pés'];<br/>
-<br/>
+var partes = ['ombro', 'joelhos']; <br/>
+var musica = ['cabeça', ...partes,'e', 'pés']; <br/><br/>
 function fn(x, y, z){}<br/>
 var args = [0, 1, 2];<br/>
-fn(...args);<br/>
-<br/>
+fn(...args);<br/><br/>
 
------------------------------------------------------------
-<br/>
+-----------------------------------------------------------<br/>
+
 #  //Operadores unários: Executam uma ação com um único operando. <br/>
 EX:<br/>
 // delete something; // Deletar algo<br/>
@@ -70,12 +68,12 @@ EX:<br/>
 <br/>
 #  //Operadores binários: Executam ações com dois operandos. <br/>
 // Operador in = something in somethingItems <br/>
-// Operador instanceof = Verifica se o objeto é uma instância <br/>
-<br/>
-----------------------------------------------------------<br/>
-<br/>
-#  //Estruturas condicionais: if, else, for, else if, switch case, forEach... <br/>
-<br/>
+// Operador instanceof = Verifica se o objeto é uma instância <br/><br/>
+
+----------------------------------------------------------<br/><br/>
+
+#  //Estruturas condicionais: if, else, for, else if, switch case, forEach... <br/><br/>
+
 const array = [0, 1, 2, 3, 4, 5];<br/>
 <br/>
 array.forEach(item => {<br/>
@@ -88,8 +86,8 @@ array.forEach(item => {<br/>
 <br/>
 // Obs: Rodar pelo node copiando e colando no terminal do VS Code.<br/>
 <br/>
-#  //Encadeando condições com else if: <br/>
-<br/>
+#  //Encadeando condições com else if: <br/><br/>
+
 const array = [2, 3, 4, 5, 6, 8, 10, 15];<br/>
 <br/>
 console.log('\nelse if');<br/>
@@ -101,10 +99,10 @@ array.forEach(item => {<br/>
    } else if (item % 5 === 0) {<br/>
       console.log(`O número ${item} é divisível por 5.`);<br/>
    }<br/>
-});<br/>
-  <br/>
-#  //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if <br/>
-<br/>
+});<br/><br/>
+
+#  //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if <br/><br/>
+
 console.log('\nif');<br/>
 array.forEach(item => {<br/>
    if (item % 2 === 0) {<br/>
@@ -116,10 +114,10 @@ if (item % 3 === 0) {<br/>
 if (item % 5 === 0) {<br/>
    console.log(`O número ${item} é divisível por 5.`); <br/>
    }<br/>
-});   <br/>
-<br/>
-#  //Switch case <br/>
-<br/>
+});   <br/><br/>
+
+#  //Switch case <br/><br/>
+
 const fruit = 'mamão';<br/>
 <br/>
 switch (fruit) {<br/>
@@ -134,13 +132,12 @@ switch (fruit) {<br/>
    default:<br/>
      console.log('Produto não existe no estoque.');<br/>
      break; //Obs: Se retirarmos esse break o default sempre será executado.<br/>
-}	 <br/>
-<br/>
-//Obs: Ao inserir uma fruta não cadastrada o sistema exibirá "O produto não exister no estoque".<br/>
-<br/>
+}	 <br/><br/>
 
--------------------------------------------------------------
-<br/>
+//Obs: Ao inserir uma fruta não cadastrada o sistema exibirá "O produto não exister no estoque".<br/><br/>
+
+-------------------------------------------------------------<br/><br/>
+
 #  //Estruturas de repetição: for, while, do...ehile, for...in, continue e break. <br/>
 <br/>
 #  /** for ([expressãoInicial]; [condição]; [incremento/decremento]) <br/>
@@ -167,8 +164,7 @@ while (n < 3){<br/>
   n++;<br/>
   x += n; ...........// 1, 2, 6<br/>
 }<br/>
-console.log(x);  <br/>
-<br/>
+console.log(x);  <br/><br/>
 
 #  /** do while - Executa primeiro, depois verifica a condição. <br/>
    do<br/>
@@ -227,8 +223,7 @@ for (let index = 0; index <  array.length; index++){<br/>
    console.log(element);<br/>
 }<br/><br/>
 
------------------------------------------------------------
-<br/><br/><br/>
+-----------------------------------------------------------=<br/><br/><br/>
 
 
 # Iniciando no Typescript
