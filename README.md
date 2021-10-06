@@ -4,12 +4,12 @@ Repositório para guardar materiais de estudo, códigos e informações importan
 #contratodecompromisso
 
 //Neste documento me proponho a digitar e testar os exercícios na IDE (VS Code), pois entendo que dessa forma aprendo melhor.
-//Para facilitar a leitura estarei dando um título para cada assunto.
+//Para facilitar a leitura estarei dando um subtítulo para cada assunto.
 
 # Javascript
 Currying, Hoisting, Imutabilidade, Tipos e Variáveis.
 
-# Exemplos de funções:
+## Exemplos de funções:
 
 //Função de execução imediata:
 
@@ -23,11 +23,11 @@ if (true) {
 console.log(`Valor após a execução do if "{$test}"`);
 })();
 
-# //Obs: 
+## //Obs: 
 //O var não respeita escopo de bloco, para respeitar devemos usar o let ou o const.
 //O const não nos permite alterar um valor do tipo primitivo de uma variável.
 
-# //Exemplo de array com const:
+## //Exemplo de array com const:
 
 const persons = ['Guilherme', 'Pedro', 'Jennifer'];
 
@@ -47,7 +47,7 @@ console.log('\nArray após as alterações: ', persons);
 
 -----------------------------------------------------------
 
-# //Spread = iterar cada ítem de um array ou objeto e passar como parâmetro.
+## //Spread = iterar cada ítem de um array ou objeto e passar como parâmetro.
 // Foi incluído do ES6
 // Exemplo:
 
@@ -60,20 +60,20 @@ fn(...args);
 
 -----------------------------------------------------------
 
-# //Operadores unários: Executam uma ação com um único operando
+## //Operadores unários: Executam uma ação com um único operando
 EX:
 // delete something; // Deletar algo
 // typeof something; // Determinar tipo
 
 //Obs: String e array pussuem a propriedade length
 
-# // Operadores binários: Executam ações com dois operandos
+## // Operadores binários: Executam ações com dois operandos
 // Operador in = something in somethingItems 
 // Operador instanceof = Verifica se o objeto é uma instância 
 
 ----------------------------------------------------------
 
-# //Estruturas condicionais: if, else, for, else if, switch case, forEach...
+## //Estruturas condicionais: if, else, for, else if, switch case, forEach...
 
 const array = [0, 1, 2, 3, 4, 5];
 
@@ -87,7 +87,7 @@ array.forEach(item => {
 
 // Obs: Rodar pelo node copiando e colando no terminal do VS Code.
 
-# //Encadeando condições com else if:
+## //Encadeando condições com else if:
 
 const array = [2, 3, 4, 5, 6, 8, 10, 15];
 
@@ -102,7 +102,7 @@ array.forEach(item => {
    }
 });
   
-# //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if
+## //Obs: Se quiser que os itens caiam em mais de uma condição não use o else if, apenas o if
 
 console.log('\nif');
 array.forEach(item => {
@@ -117,7 +117,7 @@ if (item % 5 === 0) {
    }
 });   
 
-# //Switch case
+## //Switch case
 
 const fruit = 'mamão';
 
@@ -139,10 +139,10 @@ switch (fruit) {
 
 -------------------------------------------------------------
 
-# //Estruturas de repetição: for, while, do...ehile, for...in, continue e break.
+## //Estruturas de repetição: for, while, do...ehile, for...in, continue e break.
 
-# /** for ([expressãoInicial]; [condição]; [incremento/decremento])
-#   declaração
+## /** for ([expressãoInicial]; [condição]; [incremento/decremento])
+##   declaração
 */
 
 // Ex:
@@ -154,8 +154,8 @@ for (let index =0; index < array.length; index++) {
 }
    
    
-# /** while (condição) - Só começa a ser executado se a condição for verdade
-#       declaração
+## /** while (condição) - Só começa a ser executado se a condição for verdade
+##       declaração
   */
   
 // Ex:   
@@ -168,10 +168,10 @@ while (n < 3){
 console.log(x);  
 
 
-# /** do while - Executa primeiro, depois verifica a condição. 
-#   do
-#       declaração
-#     while (condição);
+## /** do while - Executa primeiro, depois verifica a condição. 
+   do
+       declaração
+     while (condição);
   */
   
 // Ex:
@@ -183,7 +183,7 @@ do {
 console.log(i);
 
 
-# //for in e for of
+## //for in e for of
 // Ex:
 let arr = [3, 5, 7];
 arr.foo = "hello";
@@ -198,7 +198,7 @@ for (let i of arr){
 //Obs. Array em função é um objeto, então podemos por a propriedade dentro dele.
 
 
-# //Controle da repetição com continue e break:
+## //Controle da repetição com continue e break:
 
 // Ex:
 console.log('Exemplo da utilização de break');
