@@ -139,9 +139,8 @@ switch (fruit) {<br/>
 -------------------------------------------------------------<br/><br/>
 
 #  //Estruturas de repetição: for, while, do...ehile, for...in, continue e break. <br/>
-<br/>
-#  /** for ([expressãoInicial]; [condição]; [incremento/decremento]) <br/>
-#   declaração <br/>
+  /** for ([expressãoInicial]; [condição]; [incremento/decremento]) <br/>
+   declaração <br/>
 */<br/><br/>
 
 // Ex:<br/>
@@ -154,7 +153,7 @@ for (let index =0; index < array.length; index++) {<br/>
    
    
 #  /** while (condição) - Só começa a ser executado se a condição for verdade. <br/>
-#       declaração <br/>
+       declaração <br/>
   */<br/><br/>
   
 // Ex: <br/>  
@@ -170,8 +169,8 @@ console.log(x);  <br/><br/>
    do<br/>
        declaração<br/>
      while (condição);<br/>
-  */<br/>
-  <br/>
+  */<br/><br/>
+  
 // Ex:<br/>
 let i = 0;<br/>
 do {<br/>
@@ -219,7 +218,7 @@ for (let index = 0; index <  array.length; index++){<br/>
    
    if (element % 2 === 0){<br/>
       continue;<br/>
-   }	  <br/>
+   } <br/>
    console.log(element);<br/>
 }<br/><br/>
 
