@@ -225,14 +225,14 @@ for (let index = 0; index <  array.length; index++){<br/>
 
 
 # Iniciando no Typescript
-1º Configuração do ambiente e criação do arquivo index:
-2º No terminal, crie ou acesse uma pasta para trabalhar com o typescript digite: npm init e pressione enter a cada passo até terminar a instalação.
-3º Observe pela sua IDE que será criado um arquivo {}package.json e um {}package-lock.json
-4º No terminal, digite: npm i parcel-bundler  
-5º Na sua IDE crie um arquivo index.html e crie a estrutura do arquivo em html.
-6º Crie também um arquivo index.ts contendo: console.log('TypeScript');
-7º No arquivo package.json, vamos criar logo abaixo da palavra script o nosso start = "start": "parcel index.html",
-8º No arquivo index.html, referencie o arquivo index.ts dentro da tag body = <script src="./index.ts"></script>
-9º Rode o seguinte comando no terminal = npm run start
+1º Configuração do ambiente e criação do arquivo index: <br/>
+2º No terminal, crie ou acesse uma pasta para trabalhar com o typescript digite: npm init e pressione enter a cada passo até terminar a instalação.<br/>
+3º Observe pela sua IDE que será criado um arquivo {}package.json e um {}package-lock.json <br/>
+4º No terminal, digite: npm i parcel-bundler  <br/>
+5º Na sua IDE crie um arquivo index.html e crie a estrutura do arquivo em html.<br/>
+6º Crie também um arquivo index.ts contendo: console.log('TypeScript');<br/>
+7º No arquivo package.json, vamos criar logo abaixo da palavra script o nosso start = "start": "parcel index.html",<br/>
+8º No arquivo index.html, referencie o arquivo index.ts dentro da tag body = <script src="./index.ts"></script><br/>
+9º Rode o seguinte comando no terminal = npm run start<br/>
 10º copie o endereço http://localhost:xxxx e cole no seu navegador, pressione enter e em seguda a tecla f12 para ver se aparece a palavra TypeScript no console.
 
